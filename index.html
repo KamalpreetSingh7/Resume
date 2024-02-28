@@ -2,21 +2,25 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="color-scheme" content="dark" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kamal's Portfolio Website</title>
+    <title>Kamal's Portfolio | Video Editor</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="favicon.png" type="image/png" />
     <script
       src="https://kit.fontawesome.com/434db59a98.js"
       crossorigin="anonymous"
     ></script>
   </head>
   <body>
-    <div id="header">
+    <header id="header">
       <div class="container">
         <nav>
-          <img src="Images/logo.png" class="logo" />
+          <a href="/" tabindex="-1">
+            <img src="Images/logo.png" class="logo" />
+          </a>
           <ul id="sidemenu">
-            <li><a href="#header">Home</a></li>
+            <li class="active-link"><a href="/">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
@@ -26,254 +30,254 @@
           <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
-          <p>Video Editor</p>
-          <h1>Hi, I'm <span>Kamal </span><br />From Panjab</h1>
+          <p class="subtitle">VIDEO EDITOR</p>
+          <h1>Hi, I'm <span>Kamal </span><br />From Punjab</h1>
+          <a href="#contact">
+            <button tabindex="-1" class="btn btn2">Connect with me</button>
+          </a>
         </div>
       </div>
-    </div>
-    <!----------------------------------------about-------------------------------------------------------------->
-    <div id="about">
-      <div class="container">
-        <div class="row">
-          <div class="about-col-1">
-            <img src="Images/user.png" />
-          </div>
-          <div class="about-col-2">
-            <h1 class="sub-title">About Me</h1>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
-            </p>
+    </header>
+    <main>
+      <!----------------------------------------about-------------------------------------------------------------->
+      <div id="about">
+        <div class="container">
+          <h1 class="sub-title mb2">About Me</h1>
+          <div class="row">
+            <div class="about-col-2">
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book. It has
+                survived not only five centuries, but also the leap into
+              </p>
+              <p>
+                publishing software like Aldus PageMaker including versions of
+                Lorem Ipsum.
+              </p>
 
-            <div class="tab-titles">
-              <p class="tab-links active-link" onclick="opentab('skills')">
-                Skills
-              </p>
-              <p class="tab-links" onclick="opentab('experience')">
-                Experience
-              </p>
-              <p class="tab-links" onclick="opentab('education')">Education</p>
+              <div class="tabs-wrapper">
+                <div class="tab-titles">
+                  <p class="tab-links active-link" onclick="opentab('skills')">
+                    Skills
+                  </p>
+                  <p class="tab-links" onclick="opentab('experience')">
+                    Experience
+                  </p>
+                  <p class="tab-links" onclick="opentab('education')">
+                    Education
+                  </p>
+                </div>
+                <div class="divider"></div>
+                <div class="tab-content active-tab" id="skills">
+                  <ul>
+                    <li>
+                      <span>Video Editor</span><br />Motion Graphics/3D
+                      Modelling
+                    </li>
+                    <li>
+                      <span>UI/UX</span><br />Designing Websites/App Interfaces
+                    </li>
+                    <li>
+                      <span>Web Development</span><br />Web/App Development
+                    </li>
+                  </ul>
+                </div>
+                <div class="tab-content" id="experience">
+                  <ul>
+                    <li>
+                      <span>2023 - Current</span><br />Motion Graphics Artist at
+                      a Startup
+                    </li>
+                    <li>
+                      <span>2022 - 2023</span><br />UI/UX Design for an
+                      App/Website
+                    </li>
+                    <li><span>2021 - 2022</span><br />Self-Made Projects</li>
+                  </ul>
+                </div>
+                <div class="tab-content" id="education">
+                  <ul>
+                    <li>
+                      <span>2023</span><br />Video Editing and Graphic Designing
+                      at CGC
+                    </li>
+                    <li><span>2022</span><br />UI/UX Designing at a Startup</li>
+                    <li><span>2021</span><br />Web Development at GMSSS</li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <div class="tab-content active-tab" id="skills">
-              <ul>
-                <li>
-                  <span>Video Editor</span><br />Motion Graphics/3D Modelling
-                </li>
-                <li>
-                  <span>UI/UX</span><br />Designing Websites/App Interfaces
-                </li>
-                <li><span>Web Development</span><br />Web/App Development</li>
-              </ul>
-            </div>
-            <div class="tab-content" id="experience">
-              <ul>
-                <li>
-                  <span>2023 - Current</span><br />Motion Graphics Artist at a
-                  Startup
-                </li>
-                <li>
-                  <span>2022 - 2023</span><br />UI/UX Design for an App/Website
-                </li>
-                <li><span>2021 - 2022</span><br />Self-Made Projects</li>
-              </ul>
-            </div>
-            <div class="tab-content" id="education">
-              <ul>
-                <li>
-                  <span>2023</span><br />Video Editing and Graphic Designing at
-                  CGC
-                </li>
-                <li><span>2022</span><br />UI/UX Designing at a Startup</li>
-                <li><span>2021</span><br />Web Development at GMSSS</li>
-              </ul>
+            <div class="about-col-1 my-img">
+              <img src="Images/user.png" />
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <!------------------------------------------------------Services---------------------------------------->
-    <div id="services">
-      <div class="container">
-        <h1 class="sub-title">My Services</h1>
-        <div class="services-list">
-          <div>
-            <i class="fa-solid fa-video"></i>
-            <h2>Video Editing</h2>
-            <p>
-              Contrary to popular belief, Lorem Ipsum is not simply random text.
-              It has roots in a piece of classical Latin literature from 45 BC,
-              making it over 2000 years old.
-            </p>
-            <a href="#">Learn More</a>
-          </div>
-          <div>
-            <i class="fa-solid fa-crop"></i>
-            <h2>UI/UX Design</h2>
-            <p>
-              Contrary to popular belief, Lorem Ipsum is not simply random text.
-              It has roots in a piece of classical Latin literature from 45 BC,
-              making it over 2000 years old.
-            </p>
-            <a href="#">Learn More</a>
-          </div>
-          <div>
-            <i class="fa-solid fa-code"></i>
-            <h2>Web Design</h2>
-            <p>
-              Contrary to popular belief, Lorem Ipsum is not simply random text.
-              It has roots in a piece of classical Latin literature from 45 BC,
-              making it over 2000 years old.
-            </p>
-            <a href="#">Learn More</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--------------------------------------------------Portfolio---------------------------------------------->
-    <div id="portfolio">
-      <div class="container">
-        <h1 class="sub-title">My Work</h1>
-        <div class="work-list">
-          <div class="work">
-            <img src="Images/VideoEditing.png" />
-            <div class="layer">
-              <h3>Website Preloader</h3>
+      <!------------------------------------------------------Services---------------------------------------->
+      <div id="services">
+        <div class="container">
+          <h1 class="sub-title">My Services</h1>
+          <div class="services-list">
+            <div>
+              <i class="fa-solid fa-video"></i>
+              <h2>Video Editing</h2>
               <p>
-                A preloader, or what some call a loading screen, is the what you
-                see on some sites before the main content of the web page is
-                loaded.
+                Contrary to popular belief, Lorem Ipsum is not simply random
+                text. It has roots in a piece of classical Latin literature from
+                45 BC, making it over 2000 years old.
               </p>
-              <a href="#"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
+              <a href="#">Learn More</a>
             </div>
-          </div>
-          <div class="work">
-            <img src="Images/uiuxdesign.png" />
-            <div class="layer">
-              <h3>UX Interface</h3>
+            <div>
+              <i class="fa-solid fa-crop"></i>
+              <h2>UI/UX Design</h2>
               <p>
-                UX design involves the design of the entire process of acquiring
-                and integrating the product, including aspects of branding,
-                design, usability and function.
+                Contrary to popular belief, Lorem Ipsum is not simply random
+                text. It has roots in a piece of classical Latin literature from
+                45 BC, making it over 2000 years old.
               </p>
-              <a href="#"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
+              <a href="#">Learn More</a>
             </div>
-          </div>
-          <div class="work">
-            <img src="Images/webDesign.png" />
-            <div class="layer">
-              <h3>Web Design</h3>
+            <div>
+              <i class="fa-solid fa-code"></i>
+              <h2>Web Design</h2>
               <p>
-                Web design is the creation of websites and pages to reflect a
-                company's brand and information and ensure a user-friendly
-                experience.
+                Contrary to popular belief, Lorem Ipsum is not simply random
+                text. It has roots in a piece of classical Latin literature from
+                45 BC, making it over 2000 years old.
               </p>
-              <a href="#"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
+              <a href="#">Learn More</a>
             </div>
           </div>
         </div>
-        <a href="#" class="btn">See More</a>
       </div>
-    </div>
-    <!-----------------------------------------------Contact------------------------------------------------>
-    <div id="contact">
-      <div class="container">
-        <div class="row">
-          <div class="contact-left">
-            <h1 class="sub-title">Contact Me</h1>
-            <p><i class="fa-solid fa-envelope"></i>contact@example.com</p>
-            <p><i class="fa-solid fa-square-phone"></i>+91-9876204260</p>
-            <div class="social-icons">
-              <a href=""><i class="fa-brands fa-facebook"></i></a>
-              <a href=""><i class="fa-brands fa-twitter-square"></i></a>
-              <a href="https://instagram.com/_kamal_65_?igshid=MzNlNGNkZWQ4Mg=="><i class="fa-brands fa-instagram"></i></a>
-              <a href=""><i class="fa-brands fa-linkedin"></i></a>
+      <!--------------------------------------------------Portfolio---------------------------------------------->
+      <div id="portfolio">
+        <div class="container colored">
+          <h1 class="sub-title">My Work</h1>
+          <div class="work-list">
+            <div class="work">
+              <img src="Images/VideoEditing.png" />
+              <div class="layer">
+                <div class="layer-wrapper">
+                  <h3>Website Preloader</h3>
+                  <p>
+                    A preloader, or what some call a loading screen, is the what
+                    you see on some sites before the main content of the web
+                    page is loaded.
+                  </p>
+                  <a href="#"
+                    ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                  ></a>
+                </div>
+              </div>
             </div>
-            <a href="Images/mycv.pdf" download class="btn btn2">Download CV</a>
+            <div class="work">
+              <img src="Images/uiuxdesign.png" />
+              <div class="layer">
+                <div class="layer-wrapper">
+                  <h3>UX Interface</h3>
+                  <p>
+                    UX design involves the design of the entire process of
+                    acquiring and integrating the product, including aspects of
+                    branding, design, usability and function.
+                  </p>
+                  <a href="#"
+                    ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="work">
+              <img src="Images/webDesign.png" />
+              <div class="layer">
+                <div class="layer-wrapper">
+                  <h3>Web Design</h3>
+                  <p>
+                    Web design is the creation of websites and pages to reflect
+                    a company's brand and information and ensure a user-friendly
+                    experience.
+                  </p>
+                  <a href="#"
+                    ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="contact-right">
-            <form name="submit-to-google-sheet">
-              <input type="text" name="Name" placeholder="Your Name" required />
-              <input
-                type="email"
-                name="Email"
-                placeholder="Your Email"
-                required
-              />
-              <textarea
-                name="Message"
-                rows="6"
-                placeholder="Your Message"
-              ></textarea>
-              <button type="submit" class="btn btn2">Submit</button>
-            </form>
-            <span id="msg"></span>
+          <a href="#" class="btn">See More</a>
+        </div>
+      </div>
+      <!-----------------------------------------------Contact------------------------------------------------>
+
+      <div id="contact">
+        <div class="container">
+          <h1 class="sub-title mb2">Contact Me</h1>
+          <div class="row">
+            <div class="contact-right">
+              <form autocomplete="off" name="submit-to-google-sheet">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  name="Name"
+                  id="name"
+                  placeholder="Your Name"
+                  required
+                />
+
+                <label for="email">Email address</label>
+                <input
+                  id="email"
+                  type="email"
+                  name="Email"
+                  placeholder="Your Email"
+                  required
+                />
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="Message"
+                  rows="6"
+                  placeholder="Your Message"
+                ></textarea>
+                <button type="submit" class="btn btn2">Submit</button>
+              </form>
+              <span id="msg"></span>
+            </div>
+            <div class="contact-left">
+              <p>
+                <i class="fa-solid fa-envelope"></i
+                ><a href="mailto:contact@example.com">contact@example.com</a>
+              </p>
+              <p>
+                <i class="fa-solid fa-square-phone"></i
+                ><a href="tel:+91-9876204260">+91-9876204260</a>
+              </p>
+              <div class="social-icons">
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-twitter-square"></i></a>
+                <a
+                  href="https://instagram.com/_kamal_65_?igshid=MzNlNGNkZWQ4Mg=="
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+                <a href=""><i class="fa-brands fa-linkedin"></i></a>
+              </div>
+              <a href="Images/mycv.pdf" download class="btn btn2 awesome-btn"
+                >Download CV</a
+              >
+            </div>
           </div>
         </div>
       </div>
+    </main>
+    <footer>
       <div class="copyright">
-        <p>Copyright © Kamal. All Rights Reserved.</p>
+        <p class="container">Copyright © Kamal. All Rights Reserved.</p>
       </div>
-    </div>
+    </footer>
 
-    <script>
-      var tablinks = document.getElementsByClassName("tab-links");
-      var tabcontents = document.getElementsByClassName("tab-content");
-
-      function opentab(tabname) {
-        for (tablink of tablinks) {
-          tablink.classList.remove("active-link");
-        }
-        for (tabcontent of tabcontents) {
-          tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-      }
-    </script>
-    <script>
-      const scriptURL =
-        "https://script.google.com/macros/s/AKfycbx_XENYx87JCy6HXcVLPMO8pEwoTKM56n0_yjZr6oHlL7IYXGMDJ5WNz_9_3dYrV4av/exec";
-      const form = document.forms["submit-to-google-sheet"];
-      const msg = document.getElementById("msg");
-
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        fetch(scriptURL, { method: "POST", body: new FormData(form) })
-          .then((response) => {
-            msg.innerHTML = "Message Sent Successfully";
-            setTimeout(function () {
-              msg.innerHTML = "";
-            }, 5000);
-            form.reset();
-          })
-          .catch((error) => console.error("Error!", error.message));
-      });
-    </script>
-
-    <script>
-      var sidemenu= document.getElementById("sidemenu");
-
-      function openmenu(){
-        sidemenu.style.right="0";
-      }
-
-      function closemenu(){
-        sidemenu.style.right="-200px";
-      }
-    </script>
+    <script src="/script.js"></script>
   </body>
 </html>

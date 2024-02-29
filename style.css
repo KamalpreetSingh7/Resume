@@ -432,6 +432,7 @@ nav .fa-solid {
 
 #sidemenu.open {
   transform: translateX(-200px);
+  z-index: 100000001;
 }
 .backdrop {
   position: fixed;
@@ -443,6 +444,7 @@ nav .fa-solid {
   opacity: 0;
   visibility: hidden;
   transition: 200ms ease-in;
+  z-index: 100000000;
 }
 #sidemenu.open + .backdrop {
   opacity: 1;

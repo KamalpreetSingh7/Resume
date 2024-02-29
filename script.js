@@ -1,8 +1,12 @@
 // DECLARING VARIABLES
 
 const sidemenu = document.getElementById("sidemenu");
+const sidemenuBackdrop = document.querySelector("#sidemenu + .backdrop");
 const tablinks = document.getElementsByClassName("tab-links");
 const tabcontents = document.getElementsByClassName("tab-content");
+const loadingModal = document.querySelector(".loading-modal");
+const snackbar = document.querySelector("#snackbar");
+const snackbarContent = snackbar?.querySelector(".text");
 
 const scriptURL =
   "https://script.google.com/macros/s/AKfycbx_XENYx87JCy6HXcVLPMO8pEwoTKM56n0_yjZr6oHlL7IYXGMDJ5WNz_9_3dYrV4av/exec";
@@ -24,24 +28,40 @@ function opentab(tabname) {
 }
 
 function openmenu() {
-  sidemenu.style.right = "0";
+  sidemenu.classList.add("open");
 }
 
 function closemenu() {
-  sidemenu.style.right = "-200px";
+  sidemenu.classList.remove("open");
 }
 
+function showSnackbar(text) {
+  snackbar.classList.add("open");
+  snackbarContent.textContent = text;
+  snackbarContent.textContent = text;
+  setTimeout(() => {
+    snackbar.classList.remove("open");
+  }, 2000);
+}
 // EVENT LISTENERS
 
-form.addEventListener("submit", (e) => {
+form.addEventListener("submit", async (e) => {
   e.preventDefault();
-  fetch(scriptURL, { method: "POST", body: new FormData(form) })
-    .then((response) => {
-      msg.innerHTML = "Message Sent Successfully";
-      setTimeout(function () {
-        msg.innerHTML = "";
-      }, 5000);
+  loadingModal.classList.add("open");
+  try {
+    const res = await fetch(scriptURL, {
+      method: "POST",
+      body: new FormData(form),
+    });
+    if (res.ok) {
+      showSnackbar("Message Sent Successfully");
       form.reset();
-    })
-    .catch((error) => console.error("Error!", error.message));
+    } else {
+      showSnackbar("Unable to send message");
+    }
+    loadingModal.classList.remove("open");
+  } catch (e) {
+    showSnackbar("Something went wrong");
+    loadingModal.classList.remove("open");
+  }
 });

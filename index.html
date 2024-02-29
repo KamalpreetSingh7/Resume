@@ -25,16 +25,24 @@
             <li><a href="#services">Services</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#contact">Contact</a></li>
-            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            <i
+              class="fa-solid fa-xmark awesome-active"
+              onclick="closemenu()"
+            ></i>
           </ul>
-          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+          <div class="backdrop"></div>
+          <i class="fa-solid fa-bars awesome-active" onclick="openmenu()"></i>
         </nav>
-        <div class="header-text">
-          <p class="subtitle">VIDEO EDITOR</p>
-          <h1>Hi, I'm <span>Kamal </span><br />From Punjab</h1>
-          <a href="#contact">
-            <button tabindex="-1" class="btn btn2">Connect with me</button>
-          </a>
+        <div class="header-container">
+          <div class="header-text">
+            <p class="subtitle">VIDEO EDITOR</p>
+            <h1>Hi, I'm <span>Kamal </span><br />From Punjab</h1>
+            <a href="#contact">
+              <button tabindex="-1" class="btn btn2 awesome-active">
+                Connect with me
+              </button>
+            </a>
+          </div>
         </div>
       </div>
     </header>
@@ -207,7 +215,7 @@
               </div>
             </div>
           </div>
-          <a href="#" class="btn">See More</a>
+          <a href="#" class="btn awesome-active">See More</a>
         </div>
       </div>
       <!-----------------------------------------------Contact------------------------------------------------>
@@ -242,7 +250,9 @@
                   rows="6"
                   placeholder="Your Message"
                 ></textarea>
-                <button type="submit" class="btn btn2">Submit</button>
+                <button type="submit" class="btn btn2 awesome-active">
+                  Submit
+                </button>
               </form>
               <span id="msg"></span>
             </div>
@@ -274,10 +284,18 @@
     </main>
     <footer>
       <div class="copyright">
-        <p class="container">Copyright © Kamal. All Rights Reserved.</p>
+        <p class="container">© 2024 Kamal. All Rights Reserved.</p>
       </div>
     </footer>
 
-    <script src="/script.js"></script>
+    <div id="snackbar">
+      <div class="box">
+        <div class="text">Something went wrong</div>
+      </div>
+    </div>
+    <div class="loading-modal">
+      <i class="fas fa-circle-notch fa-spin"></i>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>

@@ -286,7 +286,7 @@ nav ul li a:hover::after {
   transition: background-color 0.5s;
 }
 .btn:hover {
-  background-color: #571fff !important;
+  background-color: #492E87 !important;
 }
 /*----------------------Contact--------------------------------*/
 .contact-left {
@@ -356,7 +356,7 @@ form textarea:hover {
 form input:focus-visible,
 form textarea:focus-visible {
   background: black;
-  border: thin solid #571fff;
+  border: thin solid #492E87;
 }
 
 form .btn2 {

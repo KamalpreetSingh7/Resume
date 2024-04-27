@@ -522,7 +522,7 @@ label {
   background-image: url(Images/Sprinkle.svg);
 }
 .awesome-btn {
-  background-color: rgb(0, 183, 255) !important;
+  background-color: rgb(0, 139, 139) !important;
   border: none;
   text-transform: uppercase;
   border-radius: 100px;
@@ -533,7 +533,7 @@ label {
   text-decoration: none !important;
 }
 .awesome-btn:hover {
-  background-color: #fff !important;
+  background-color: #b3ffff !important;
   color: black;
 }
 
